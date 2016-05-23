@@ -5,13 +5,9 @@
 
 static int list_init(void) {
     struct task_struct *init_task;
-    struct list_head *pos;
     int count;
-    char *method;
     count = 0;
     init_task = NULL;
-    pos = NULL;
-    method = NULL;
     init_task = &init_task;
     printk("list processes using for_each_process");
     printk(KERN_ALERT"PID\tCOMM\n");
@@ -39,6 +35,6 @@ module_init( list_init );
 
 module_exit( list_exit );
 
-MODULE_AUTHOR( "Along" );
+MODULE_AUTHOR( "windr00" );
 
 MODULE_LICENSE( "GPL" );

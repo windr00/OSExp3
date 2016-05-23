@@ -4,18 +4,18 @@
 
 
 static int list_init(void) {
-    struct task_struct *init_task;
+    struct task_struct *task;
     int count;
     count = 0;
-    init_task = NULL;
-    init_task = &init_task;
+    task = NULL;
+    task = &init_task;
     printk("list processes using for_each_process");
     printk(KERN_ALERT"PID\tCOMM\n");
-    for_each_process(init_task) {
+    for_each_process(task) {
 
         count++;
 
-        printk(KERN_ALERT "%d\t%s\n", init_task->pid, init_task->comm);
+        printk(KERN_ALERT "%d\t%s\n", task->pid, task->comm);
 
     }
 
